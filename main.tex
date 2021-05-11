@@ -1,0 +1,161 @@
+\documentclass{package/notes}
+
+%%%%%%%%%% Default Package %%%%%%%%%%%%%
+\usepackage{package/color-env}
+
+%%%%%%%%%% Required Packages %%%%%%%%%%%%%
+\usepackage{background}
+\usepackage[object=vectorian]{pgfornament} %% used in title.tex
+
+\usepackage{amssymb,amsmath,amsfonts}  %%% for maths
+\usepackage{enumitem}
+\newlist{gitemize}{itemize}{4}
+\setlist[gitemize,1]{
+  leftmargin=\dimexpr0.3cm+\labelsep\relax,
+  label={\smash{\raisebox{-0.25\height}{\includegraphics[width=0.6cm]{resources/qc-list-icon.png}}}}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%% Bibliography %%%%%%%%%
+
+\addbibresource{resources/references.bib}
+\setcounter{chapter}{-1}
+\begin{document}
+
+\begin{titlepage}
+\backgroundsetup{contents={}}
+
+
+\centering % Centre everything on the title page
+		
+\scshape % Use small caps for all text on the title page
+
+\vspace*{\baselineskip} % White space at the top of the page
+
+%------------------------------------------------
+%	Title
+%------------------------------------------------
+
+\rule{\textwidth}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt} % Thick horizontal rule
+\rule{\textwidth}{0.4pt} % Thin horizontal rule
+
+\vspace{0.75\baselineskip} % Whitespace above the title
+{\huge { Quantum Computing }\\} % Title
+
+\vspace{0.75\baselineskip} % Whitespace below the title
+
+\rule{\textwidth}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt} % Thin horizontal rule
+\rule{\textwidth}{1.6pt} % Thick horizontal rule
+
+\vspace{2\baselineskip} % Whitespace after the title block
+
+\LARGE{Summer of Science 2021} 
+
+\vspace*{3\baselineskip} % Whitespace under the subtitle
+
+
+
+\vspace{0.5\baselineskip} 
+
+{\scshape   \LARGE Eeshaan Jain\\ } % Editor list
+
+\vspace{0.2\baselineskip} 
+
+\textit{\Large Indian Institute of Technology Bombay} 
+
+\vfill 
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=13cm, height=7cm]{resources/quantum-computing-qubit.jpg}
+\end{figure}
+\vspace{0.3\baselineskip} 
+
+
+{\large If you can fathom quantum mechanics without getting dizzy, you don't get it
+Et kvantebitte spring nærmere supercomputeren\\ - Niels Bohr}
+\end{titlepage}
+
+\newpage
+
+\backgroundsetup{contents={}}
+
+\tableofcontents
+
+\chapter{Plan of Action}
+\hrule
+\vspace{5mm}
+\begin{gitemize}
+\item \Large{\textbf{Week 0}}
+\qquad
+Overview of Quantum Computing and Algorithms
+\vspace{5mm}
+\hrule
+\vspace{5mm}
+\item \Large{\textbf{Week 1}}
+\qquad
+Review of Quantum Mechanics and Computer Science
+\vspace{5mm}
+\hrule
+\vspace{5mm}
+\item \Large{\textbf{Week 2}}
+\qquad
+Quantum Circuits
+\vspace{5mm}
+\hrule
+\vspace{5mm}
+\item \Large{\textbf{Week 3}}
+\qquad
+Quantum Fourier transform and Search algorithms
+\vspace{5mm}
+\hrule
+\vspace{5mm}
+\item \Large{\textbf{Week 4}}
+\qquad
+Physical realization of Quantum Computers
+\vspace{5mm}
+\hrule
+\vspace{5mm}
+\item \Large{\textbf{Week 5}}
+\qquad
+Quantum noise, operations and distance measures
+\vspace{5mm}
+\hrule
+\vspace{5mm}
+\item \Large{\textbf{Week 6}}
+\qquad
+Quantum Error Correction
+\vspace{5mm}
+\hrule
+\vspace{5mm}
+\item \Large{\textbf{Week 7}}
+\qquad
+Quantum Error Correction continued, and QIT started
+\vspace{5mm}
+\hrule
+\vspace{5mm}
+\item \Large{\textbf{Week 8}}
+\qquad
+Quantum Information Theory
+\vspace{5mm}
+\hrule
+\end{gitemize}
+\vspace{5mm}
+\colorlet{shadecolor}{orange!12}
+\begin{shaded}
+\begin{itemize}
+\item[$\rhd$] The above schedule is tentative, and bound to change depending on the complexity and nature of the topic going on.
+    \item[$\rhd$] The book "Quantum Computation and Quantum Information" by Michael A. Nielsen and Isaac L. Chuang is going to be religiously followed for this SoS. Any other material referenced will be mentioned at the end of the document.
+    \item[$\rhd$] The weekly updated notes will be uploaded at
+    \begin{itemize}
+        \item[$\diamond$] \href{https://github.com/EeshaanJain/Quantum-Computing}{the github repository}
+        \item[$\diamond$]
+        \href{https://eeshaanjain.github.io/quantum}{my website}
+    \end{itemize}
+\end{itemize}
+
+\end{shaded}
+\newpage
+
+\include{1-introduction}
+
+\end{document}
