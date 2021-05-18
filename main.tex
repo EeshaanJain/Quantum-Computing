@@ -6,14 +6,20 @@
 %%%%%%%%%% Required Packages %%%%%%%%%%%%%
 \usepackage{background}
 \usepackage[object=vectorian]{pgfornament} %% used in title.tex
-
+\usepackage{braket}
+\usepackage{tikz}
+\usepackage{subcaption}
+\usetikzlibrary{arrows.meta,quantikz}
 \usepackage{amssymb,amsmath,amsfonts}  %%% for maths
+\usepackage{multicol}
 \usepackage{enumitem}
 \newlist{gitemize}{itemize}{4}
 \setlist[gitemize,1]{
   leftmargin=\dimexpr0.3cm+\labelsep\relax,
   label={\smash{\raisebox{-0.25\height}{\includegraphics[width=0.6cm]{resources/qc-list-icon.png}}}}
 }
+\newcommand{\0}{\ket{0}}
+\newcommand{\1}{\ket{1}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Bibliography %%%%%%%%%
 
@@ -56,7 +62,7 @@
 
 \vspace{0.5\baselineskip} 
 
-{\scshape   \LARGE Eeshaan Jain\\ } % Editor list
+{\scshape   \LARGE Eeshaan Jain\\ Mentor: Praveen Sriram} % Editor list
 
 \vspace{0.2\baselineskip} 
 
@@ -71,8 +77,7 @@
 \vspace{0.3\baselineskip} 
 
 
-{\large If you can fathom quantum mechanics without getting dizzy, you don't get it
-Et kvantebitte spring nærmere supercomputeren\\ - Niels Bohr}
+{\large If you can fathom quantum mechanics without getting dizzy, you don't get it. Et kvantebitte spring nærmere supercomputeren\\ - Niels Bohr}
 \end{titlepage}
 
 \newpage
@@ -84,58 +89,56 @@ Et kvantebitte spring nærmere supercomputeren\\ - Niels Bohr}
 \chapter{Plan of Action}
 \hrule
 \vspace{5mm}
+\hrule
+\vspace{5mm}
 \begin{gitemize}
 \item \Large{\textbf{Week 0}}
 \qquad
-Overview of Quantum Computing and Algorithms
+Review of Quantum Mechanics
 \vspace{5mm}
 \hrule
 \vspace{5mm}
 \item \Large{\textbf{Week 1}}
 \qquad
-Review of Quantum Mechanics and Computer Science
+Quantum Circuits
 \vspace{5mm}
 \hrule
 \vspace{5mm}
 \item \Large{\textbf{Week 2}}
 \qquad
-Quantum Circuits
+Quantum Fourier transform and Search algorithms
 \vspace{5mm}
 \hrule
 \vspace{5mm}
 \item \Large{\textbf{Week 3}}
 \qquad
-Quantum Fourier transform and Search algorithms
+Physical realization of Quantum Computers
 \vspace{5mm}
 \hrule
 \vspace{5mm}
 \item \Large{\textbf{Week 4}}
 \qquad
-Physical realization of Quantum Computers
+NMR
 \vspace{5mm}
 \hrule
 \vspace{5mm}
 \item \Large{\textbf{Week 5}}
 \qquad
-Quantum noise, operations and distance measures
+Superconducting Qubits
 \vspace{5mm}
 \hrule
 \vspace{5mm}
 \item \Large{\textbf{Week 6}}
 \qquad
-Quantum Error Correction
+Spin Qubits
 \vspace{5mm}
 \hrule
 \vspace{5mm}
 \item \Large{\textbf{Week 7}}
 \qquad
-Quantum Error Correction continued, and QIT started
+Buffer (to modify PoA as time progresses)
 \vspace{5mm}
 \hrule
-\vspace{5mm}
-\item \Large{\textbf{Week 8}}
-\qquad
-Quantum Information Theory
 \vspace{5mm}
 \hrule
 \end{gitemize}
@@ -157,5 +160,6 @@ Quantum Information Theory
 \newpage
 
 \include{1-introduction}
-
-\end{document}
+\newpage
+\include{2-QM}
+ \end{document}
